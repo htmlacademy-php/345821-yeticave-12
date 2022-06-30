@@ -1,7 +1,7 @@
 # Личный проект «YetiCave»
 
 * Студент: [Ignat Polnjuakov](https://up.htmlacademy.ru/php/12/user/345821).
-* Наставник: [](https://htmlacademy.ru/profile/id93207).
+* Наставник: [Андрей Пилипенко](https://htmlacademy.ru/profile/id93207).
 
 ---
 
