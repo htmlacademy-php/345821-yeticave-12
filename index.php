@@ -111,7 +111,7 @@ $lots = [
           <?php foreach ($lots as $val): ?>
             <li class="lots__item lot">
                 <div class="lot__image">
-                    <img src="<?=$val['pic']; ?>" width="350" height="260" alt="">
+                    <img src="<?=$val['pic']; ?>" width="350" height="260" alt="<?=$val['name']; ?>">
                 </div>
                 <div class="lot__info">
                     <span class="lot__category"><<?=$val['cat']; ?></span>
@@ -119,7 +119,7 @@ $lots = [
                     <div class="lot__state">
                         <div class="lot__rate">
                             <span class="lot__amount"><?=$val['price']; ?>/span>
-                            <span class="lot__cost">цена<b class="<?=$val['price']; ?>">р</b></span>
+                            <span class="lot__cost"><?=$val['price']; ?><b class="rub">р</b></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
