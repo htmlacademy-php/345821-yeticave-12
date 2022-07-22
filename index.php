@@ -1,7 +1,63 @@
 <?php
 $is_auth = rand(0, 1);
 
-$user_name = ''; // укажите здесь ваше имя
+$user_name = 'Ignat Polnyakov'; // укажите здесь ваше имя
+$cats = [
+    "Доски и лыжи", "Крепления", "Ботинки", "Одежда", "Инструменты", "Разное"
+];
+
+$lots = [
+    [
+        'name' => '2014 Rossignol District Snowboard',
+        'cat' => 'Доски и лыжи',
+        'price' => 10999,
+        'pic' => 'img/lot-1.jpg'
+    ],
+    [
+        'name' => 'DC Ply Mens 2016/2017 Snowboard',
+        'cat' => 'Доски и лыжи',
+        'price' => 159999,
+        'pic' => 'img/lot-2.jpg'
+    ],
+    [
+        'name' => 'Крепления Union Contact Pro 2015 года размер L/XL',
+        'cat' => 'Крепления',
+        'price' => 8000,
+        'pic' => 'img/lot-3.jpg'
+    ],
+    [
+        'name' => 'Ботинки для сноуборда DC Mutiny Charocal',
+        'cat' => 'Ботинки',
+        'price' => 10999,
+        'pic' => 'img/lot-4.jpg'
+    ],
+    [
+        'name' => 'Куртка для сноуборда DC Mutiny Charocal',
+        'cat' => 'Одежда',
+        'price' => 7500,
+        'pic' => 'img/lot-5.jpg'
+    ],
+    [
+        'name' => 'Маска Oakley Canopy',
+        'cat' => '	Разное',
+        'price' => 5400,
+        'pic' => 'img/lot-6.jpg'
+    ]
+];
+
+function retail_price(int $number)
+{
+    $numbers = ceil($number);
+    $total_number = number_format($numbers, 0, '', ' ');
+
+    if ($numbers < 1000) {
+        $total_number = $numbers;
+    }
+
+    return $total_number . ' ₽';
+};
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -60,8 +116,8 @@ $user_name = ''; // укажите здесь ваше имя
                     <h3 class="lot__title"><a class="text-link" href="pages/lot.html">Название товара</a></h3>
                     <div class="lot__state">
                         <div class="lot__rate">
-                            <span class="lot__amount">Стартовая цена</span>
-                            <span class="lot__cost">цена<b class="rub">р</b></span>
+                            <span class="lot__amount"><?=$val['price']; ?></span>
+                            <span class="lot__cost"><?=retail_price($val['price']) ?></span>
                         </div>
                         <div class="lot__timer timer">
                             12:23
