@@ -45,6 +45,7 @@ $lots = [
     ]
 ];
 
+
 function retail_price(int $number)
 {
     $numbers = ceil($number);
@@ -83,6 +84,7 @@ function retail_price(int $number)
             <a class="main-header__add-lot button" href="pages/add-lot.html">Добавить лот</a>
 
             <nav class="user-menu">
+
 
                 <!-- здесь должен быть PHP код для показа меню и данных пользователя -->
                 <?php if ($is_auth == 1) : ?>
@@ -145,6 +147,7 @@ function retail_price(int $number)
             </ul>
         </section>
     </main>
+
 </div>
 
 <footer class="main-footer">
@@ -154,6 +157,8 @@ function retail_price(int $number)
                 <li class="nav__item">
                     <a href="pages/all-lots.html"><?=$cat; ?></a>
                 </li>
+
+
             <?php endforeach; ?>
         </ul>
     </nav>
