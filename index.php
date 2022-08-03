@@ -56,7 +56,7 @@ function retail_price(int $number)
     }
 
     return $total_number . ' ₽';
-};
+}
 
 
 ?>
@@ -114,7 +114,7 @@ function retail_price(int $number)
             <ul class="promo__list">
                 <?php foreach ($cats as $cat): ?>
                     <li class="promo__item promo__item--boards">
-                        <a class="promo__link" href="pages/all-lots.html"><?=$cat; ?></a>
+                        <a class="promo__link" href="pages/all-lots.html"><?= $cat; ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -127,15 +127,15 @@ function retail_price(int $number)
                 <?php foreach ($lots as $val): ?>
                     <li class="lots__item lot">
                         <div class="lot__image">
-                            <img src="<?=$val['pic']; ?>" width="350" height="260" alt="<?=$val['name']; ?>">
+                            <img src="<?= $val['pic']; ?>" width="350" height="260" alt="<?= $val['name']; ?>">
                         </div>
                         <div class="lot__info">
-                            <span class="lot__category"><<?=$val['cat']; ?></span>
-                            <h3 class="lot__title"><a class="text-link" href="pages/lot.html"><?=$val['name']; ?></a></h3>
+                            <span class="lot__category"><?= $val['cat']; ?></span>
+                            <h3 class="lot__title"><a class="text-link" href="pages/lot.html"><?= $val['name']; ?></a></h3>
                             <div class="lot__state">
                                 <div class="lot__rate">
-                                    <span class="lot__amount"><?=$val['price']; ?></span>
-                                    <span class="lot__cost"><?=retail_price($val['price']); ?></span>
+                                    <span class="lot__amount"><?= $val['price']; ?></span>
+                                    <span class="lot__cost"><?= retail_price($val['price']); ?></span>
                                 </div>
                                 <div class="lot__timer timer">
                                     12:23
@@ -155,7 +155,7 @@ function retail_price(int $number)
         <ul class="nav__list container">
             <?php foreach ($cats as $cat): ?>
                 <li class="nav__item">
-                    <a href="pages/all-lots.html"><?=$cat; ?></a>
+                    <a href="pages/all-lots.html"><?= $cat; ?></a>
                 </li>
 
 
@@ -201,3 +201,10 @@ function retail_price(int $number)
                 </svg>
             </a>
         </div>
+    </div>
+</footer>
+
+<script src="flatpickr.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
