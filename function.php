@@ -1,4 +1,7 @@
 <?php
+
+date_default_timezone_set("Europe/Moscow");
+
  function retail_price($number)
 {
     $numbers = ceil($number);
@@ -12,4 +15,22 @@
 
     return $total_number .' ₽';
 }
+
+function expired_time($val)
+{
+    $total_end = strtotime($val);
+    $dt_now = time();
+    $total_time = $total_end - $dt_now;
+    $hours = floor($total_time / 3600);
+    $minutes = floor(($total_time % 3600) / 60);
+    return "$hours : $minutes";
+}
+
+ function view_class($val){
+   $total_end = strtotime($val);
+   $dt_now = time();
+   $total_time = $total_end-$dt_now;
+ if ($total_time < 3600) {
+     return 'timer--finishing'
+         ;}}
 ?>
