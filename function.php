@@ -31,6 +31,6 @@ function expired_time($val)
    $dt_now = time();
    $total_time = $total_end-$dt_now;
  if ($total_time < 3600) {
-     return 'timer--finishing'
-         ;}}
-?>
+     return 'timer--finishing';}
+ }
+
