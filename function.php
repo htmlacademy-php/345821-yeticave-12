@@ -26,11 +26,16 @@ function expired_time($val)
     return "$hours : $minutes";
 }
 
- function view_class($val){
-   $total_end = strtotime($val);
-   $dt_now = time();
-   $total_time = $total_end-$dt_now;
- if ($total_time < 3600) {
-     return 'timer--finishing';}
- }
+function view_class (string $val): string
+{
+    $class_name = '';
+    $total_end = strtotime($val);
+    $dt_now = time();
+    $total_time = $total_end - $dt_now;
 
+    if ($total_time < 3600) {
+        $class_name = 'timer--finishing';
+    }
+
+    return $class_name;
+}
