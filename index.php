@@ -15,3 +15,4 @@ $layout_content = include_template('layout.php',[
     'categories' => $categories,
     'title' => 'Главная страница'
 ]);
+print($layout_content);
