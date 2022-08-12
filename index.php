@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @var array $lots
- * @var array $categories
- * @var array $user_name
- * @var array $is_auth
+ * @var array $lots  // переменная массива товаров
+ * @var array $categories // переменная масива категорий
+ * @var array $user_name // имя пользователя
+ * @var array $is_auth // авторизация пользователя
  */
 
 require_once 'helpers.php';
