@@ -26,7 +26,7 @@ function expired_time($val)
     return "$hours : $minutes";
 }
 
-function view_class (string $val): string
+function view_class($val)
 {
     $class_name = '';
     $total_end = strtotime($val);
@@ -39,3 +39,6 @@ function view_class (string $val): string
 
     return $class_name;
 }
+
+
+
