@@ -40,7 +40,7 @@ if ($result) {
     exit;
 }
 
-$sql = 'SELECT l.name, l.start_price, l.img_link, MAX(b.price) AS max_price, c.name
+$sql = 'SELECT l.id, l.name AS lot_name, l.end_date, l.start_price, l.img_link, MAX(b.price) AS max_price, c.name AS category_name
         FROM lots l
         LEFT JOIN bet b ON l.id = b.lot_id
         JOIN categories c ON l.category_id = c.id
