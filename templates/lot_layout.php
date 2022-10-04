@@ -40,19 +40,19 @@
                 <?php
                 foreach ($categories as $cat): ?>
                     <li class="nav__item">
-                        <a href="pages/all-lots.html"><?=$cat['name']?></a>
+                        <a href="all-lots.php?category_id=<?= $cat['id'];?>"><?= $cat['name'];?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>
         </nav>
         <section class="lot-item container">
-            <h2><?=htmlspecialchars($lot['name']); ?></h2>
+            <h2><?=htmlspecialchars($lot['lot_name']); ?></h2>
             <div class="lot-item__content">
                 <div class="lot-item__left">
                     <div class="lot-item__image">
                         <img src="<?=htmlspecialchars($lot['img_link']); ?>" width="730" height="548" alt="Сноуборд">
                     </div>
-                    <p class="lot-item__category">Категория: <span><?=htmlspecialchars($lot['name']); ?></span></p>
+                    <p class="lot-item__category">Категория: <span><?=htmlspecialchars($lot['lot_name']); ?></span></p>
                     <p class="lot-item__description"><?=htmlspecialchars($lot['description']); ?></p>
                 </div>
                 <div class="lot-item__right">
@@ -146,7 +146,7 @@
             <?php
             foreach ($categories as $cat): ?>
                 <li class="nav__item">
-                    <a href="pages/all-lots.html"><?=$cat['name']?></a>
+                    <a href="all-lots.php?category_id=<?= $cat['id'];?>"><?= $cat['name'];?></a>
                 </li>
             <?php endforeach; ?>
         </ul>
