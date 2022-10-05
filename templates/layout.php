@@ -40,21 +40,28 @@
             </nav>
         </div>
     </header>
-    <?php if ($title == 'Главная') : ?>
     <main class="container">
-        <?php else : ?>
-        <main>
-            <?php endif; ?>
-
-        <?=$content; ?>
+        <section class="promo">
+            <h2 class="promo__title">Нужен стафф для катки?</h2>
+            <p class="promo__text">На нашем интернет-аукционе ты найдёшь самое эксклюзивное сноубордическое и горнолыжное снаряжение.</p>
+            <ul class="promo__list">
+                <?php  foreach ($categories as $cat): ?>
+                    <li class="promo__item promo__item--boards">
+                        <a class="promo__link" href="pages/all-lots.html"><?= $cat;?></a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </section>
+        <?= $content;?>
     </main>
 </div>
+
 <footer class="main-footer">
     <nav class="nav">
         <ul class="nav__list container">
             <?php foreach ($categories as $cat): ?>
                 <li class="nav__item">
-                    <a href="all-lots.php?category_id=<?= $cat['id'];?>"><?= $cat['name'];?></a>
+                    <a href="pages/all-lots.html"><?=$cat;?></a>
                 </li>
             <?php endforeach; ?>
         </ul>
