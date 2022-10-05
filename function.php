@@ -26,7 +26,7 @@ function expired_time($val)
     return "$hours : $minutes";
 }
 
-function view_class($val)
+function view_class (string $val): string
 {
     $class_name = '';
     $total_end = strtotime($val);
@@ -39,40 +39,3 @@ function view_class($val)
 
     return $class_name;
 }
-
-
-function getLots($link)
-{
-    $sql = 'SELECT l.id, l.name AS lot_name, l.end_date, l.start_price, l.img_link, MAX(b.price) AS max_price, c.name AS category_name
-        FROM lots l
-        LEFT JOIN bet b ON l.id = b.lot_id
-        JOIN categories c ON l.category_id = c.id
-        WHERE l.end_date > NOW()
-        GROUP BY l.id
-        ORDER BY l.created_at DESC LIMIT 6';
-
-    $res = mysqli_query($link, $sql);
-
-    if (!$res) {
-        echo mysqli_error($link);
-    }
-    return mysqli_fetch_all($res, MYSQLI_ASSOC);
-}
-
-
-function getCategories($link)
-{
-// Запрос на получение списка категорий
-    $categories_list = "SELECT * FROM categories ";
-
-//Выполняем запрос и получаем результат
-    $result = mysqli_query($link, $categories_list);
-
-// Запрос выполнен успешно
-    if (!$result) {
-        echo mysqli_error($link);
-    }
-    return mysqli_fetch_all($result, MYSQLI_ASSOC);
-}
-
-
