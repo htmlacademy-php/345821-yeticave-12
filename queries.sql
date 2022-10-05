@@ -16,14 +16,14 @@ VALUES ('ignat-88@bk.ru', 'Ignat', 'Qwerty15', '89100136555'),
 
 INSERT INTO lots (name, description, img_link, start_price, end_date, bet_step, created_by, category_id, win_user_id)
 VALUES ('2014 Rossignol District Snowboard', 'сноуборд', 'img/lot-1.jpg', '10999', DATE_ADD(NOW(),INTERVAL + 30 DAY), '500', '1', '1', '2'),
-       ('DC Ply Mens 2016/2017 Snowboard', 'сноуборд', 'img/lot-2.jpg', '159999', DATE_ADD(NOW(),INTERVAL + 15 DAY), '500', '2', '1', '1'),
+       ('DC Ply Mens 2016/2017 Snowboard', 'сноуборд', 'img/lot-2.jpg', '159999', DATE_ADD(NOW(),INTERVAL + 30 DAY), '500', '2', '1', '1'),
        ('Крепления Union Contact Pro 2015 года размер L/XL', 'крепление новое', 'img/lot-3.jpg', '8000', DATE_ADD(NOW(),INTERVAL + 10 DAY),
         '500', '2', '2', '1'),
        ('Ботинки для сноуборда DC Mutiny Charocal', 'боты удобные фиксируют стопу', 'img/lot-4.jpg', '10999',
         DATE_ADD(NOW(),INTERVAL - 2 DAY), '500', '1', '3', '2'),
-       ('Куртка для сноуборда DC Mutiny Charocal', 'куртка класс', 'img/lot-5.jpg', '7500', DATE_ADD(NOW(),INTERVAL + 18 DAY), '500', '1',
+       ('Куртка для сноуборда DC Mutiny Charocal', 'куртка класс', 'img/lot-5.jpg', '7500', DATE_ADD(NOW(),INTERVAL - 2 DAY), '500', '1',
         '4', '2'),
-       ('Маска Oakley Canopy', 'маска защищает от ветра и снега', 'img/lot-6.jpg', '5400', DATE_ADD(NOW(),INTERVAL + 5 DAY), '500', '2',
+       ('Маска Oakley Canopy', 'маска защищает от ветра и снега', 'img/lot-6.jpg', '5400', DATE_ADD(NOW(),INTERVAL - 2 DAY), '500', '2',
         '6', '1');
 -- заполнение таблицы объявлений
 
