@@ -1,7 +1,5 @@
 <?php
 
-
-
 function getDb(): mysqli
 {
     $db = require_once 'source/db.php';
