@@ -43,6 +43,7 @@ function view_class($val)
 
 function getLots($link)
 {
+    // запрос на получение списка лотов
     $sql = 'SELECT l.id, l.name AS lot_name, l.end_date, l.start_price, l.img_link, MAX(b.price) AS max_price, c.name AS category_name
         FROM lots l
         LEFT JOIN bet b ON l.id = b.lot_id
@@ -50,7 +51,7 @@ function getLots($link)
         WHERE l.end_date > NOW()
         GROUP BY l.id
         ORDER BY l.created_at DESC LIMIT 6';
-
+ // получаем результат запроса
     $res = mysqli_query($link, $sql);
 
     if (!$res) {
@@ -68,10 +69,12 @@ function getCategories($link)
 //Выполняем запрос и получаем результат
     $result = mysqli_query($link, $categories_list);
 
-// Запрос выполнен успешно
+
     if (!$result) {
+        //ошибка запроса
         echo mysqli_error($link);
     }
+    //запрос выполнен успешно
     return mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
