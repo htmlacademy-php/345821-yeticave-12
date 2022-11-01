@@ -60,6 +60,20 @@ function getLots($link)
     return mysqli_fetch_all($res, MYSQLI_ASSOC);
 }
 
+function getLot($link, int $lotId)
+{
+    $sql = "SELECT l.id , l.name AS lot_name, l.description,l.bet_step, l.created_by, l.end_date, l.start_price, l.img_link,  c.name AS category_name
+        FROM lots l
+        JOIN categories c ON l.category_id = c.id
+        WHERE l.id = ?";
+    $stmt = mysqli_prepare($link, $sql);
+    mysqli_stmt_bind_param($stmt, 'i', $lotId);
+    mysqli_stmt_execute($stmt);
+    $res = mysqli_stmt_get_result($stmt);
+    return mysqli_fetch_assoc($res);
+}
+        // запрос на получение лота по его ID
+
 
 function getCategories($link)
 {
@@ -78,4 +92,8 @@ function getCategories($link)
     return mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
+function show404() {
+    header('404', true, 404);
+    die();
+}
 
