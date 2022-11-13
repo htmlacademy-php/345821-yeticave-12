@@ -19,7 +19,7 @@ require_once 'source/init.php';
 
 $link = getDb();
 $categories = getCategories($link);
-$lotID = filter_input(INPUT_GET, 'lot_id', FILTER_SANITIZE_NUMBER_INT);
+$lotID = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 if (!$lotID) {
     header("Location: pages/404.html");
     exit;
