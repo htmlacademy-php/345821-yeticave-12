@@ -102,10 +102,3 @@
             </div>
         </section>
     </main>
-
-</div>
-
-
-
-
-</html>
