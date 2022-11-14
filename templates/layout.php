@@ -41,7 +41,6 @@
         </div>
     </header>
     <?php if ($title == 'Главная') : ?>
-    <main class="container">
         <?php else : ?>
         <main>
             <?php endif; ?>
