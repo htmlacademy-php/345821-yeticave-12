@@ -40,9 +40,10 @@
             </nav>
         </div>
     </header>
+    <main>
     <?php if ($title == 'Главная') : ?>
         <?php else : ?>
-        <main>
+
             <?php endif; ?>
 
         <?=$content; ?>
