@@ -62,6 +62,7 @@ function getLots($link)
 
 function getLot($link, int $lotId)
 {
+    // запрос на получение лота по его ID
     $sql = "SELECT l.id , l.name AS lot_name, l.description,l.bet_step, l.created_by, l.end_date, l.start_price, l.img_link,  c.name AS category_name
         FROM lots l
         JOIN categories c ON l.category_id = c.id
@@ -72,8 +73,6 @@ function getLot($link, int $lotId)
     $res = mysqli_stmt_get_result($stmt);
     return mysqli_fetch_assoc($res);
 }
-        // запрос на получение лота по его ID
-
 
 function getCategories($link)
 {

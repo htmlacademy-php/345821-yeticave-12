@@ -29,6 +29,7 @@ $main_content = include_template('main.php', [
 ]);
 
 $layout_content = include_template('layout.php',  [
+    'main' => true,
     'content' => $main_content,
     'categories' => $categories,
     'title' => 'Главная',
