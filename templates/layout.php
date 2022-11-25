@@ -40,12 +40,7 @@
             </nav>
         </div>
     </header>
-    <?php if ($title == 'Главная') : ?>
-    <main class="container">
-        <?php else : ?>
-        <main>
-            <?php endif; ?>
-
+    <main <?= !empty($main) ? 'class="container"' : '' ?>>
         <?=$content; ?>
     </main>
 </div>
